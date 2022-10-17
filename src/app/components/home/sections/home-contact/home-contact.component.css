@@ -1,0 +1,84 @@
+.title_contact {
+	font-size: 1.5rem;
+	font-weight: 400;
+	color: #2196f3;
+}
+
+.form_contact input,
+.form_contact textarea{
+	width: 100%;
+	margin-top: 20px;
+	padding: 14px 20px;
+	color: #495057;
+	border: 2px solid #ced4da;
+	border-radius: 5px;
+	transition: all ease .3s;
+}
+.form_contact textarea {
+	min-height: 150px;
+	max-height: 150px;
+    min-width: 100%;
+	max-width: 100%;
+}
+.form_contact input:focus,
+.form_contact textarea:focus,
+.form_contact button {
+	outline: none;
+}
+.form_contact input.wrong,
+.form_contact textarea.wrong {
+	border: 2px solid #F44336;
+}
+.form_contact button {
+	margin-top: 20px;
+	padding: 14px 20px;
+	background: #2196F3;
+	color: #fff;
+	border: 0;
+	transition: all ease .3s;
+	border-radius: 5px;
+	font-weight: bold;
+	transition: all ease .3s;
+	cursor: pointer;
+}
+.form_contact button:hover {
+	background: #1075c5;
+}
+.error {
+    margin-top: 5px;
+	color: #e23232;
+}
+img {
+	display: block;
+	width: 100%;
+	max-width: 540px;
+	margin: 0 auto;
+}
+
+
+/*======/  Footer  /======*/
+footer > p {
+	margin: 0;
+	padding-bottom: 40px;
+	text-align: center;
+	color: #55859c;
+}
+footer .social {
+    margin-bottom: 10px;
+    text-align: center;
+}
+footer .social a {
+	display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin: 0 5px;
+}
+footer .social a img {
+    position: relative;
+    top: 0;
+    width: 100%;
+    transition: all ease .3s;
+}
+footer .social a:hover img {
+    top: -10px;
+}

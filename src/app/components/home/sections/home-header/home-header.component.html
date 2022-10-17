@@ -1,0 +1,76 @@
+<div class="container py-5">
+	<div class="language">
+		<button
+			[class]="languages.en ? 'btn btn_left active' : 'btn btn_left'"
+			(click)="changeLanguage('en')"
+			title="English"
+		>EN</button>
+		<button
+			[class]="languages.es ? 'btn btn_right active' : 'btn btn_right'"
+			(click)="changeLanguage('es')"
+			title="Spanish"
+		>ES</button>
+	</div>
+
+
+	<div class="profile">
+		<img class="avatar" src="/assets/home/avatar.png" alt="perfil">
+		<div class="mt-3 ms-2">
+			<h3 class="title">{{profile.name}}</h3>
+			<h3 class="title">{{profile.work_position}}</h3>
+		</div>
+	</div>
+
+
+	<div class="row mt-5">
+		<div class="col-12 col-lg-6">
+			<p class="description">
+				{{'header.about_me' | translate}}
+			</p>
+		</div>
+
+		<div class="col-12 mt-5 mt-lg-0 col-lg-6 container_skills">
+			<h2 class="mb-3 title">{{'header.skills_title' | translate}}</h2>
+
+			<div class="mode_desktop">
+				<div class="skills">
+					<img class="skill" src="/assets/home/skills/ico_html5.png" alt="icono_html5" title="HTML5">
+					<img class="skill" src="/assets/home/skills/ico_css3.png" alt="icono_css3" title="CSS3">
+					<img class="skill" src="/assets/home/skills/ico_js.png" alt="icono_javascript" title="JAVASCRIPT">
+					<img class="skill" src="/assets/home/skills/ico_ts.png" alt="icono_typescript" title="TYPESCRIPT">
+					<img class="skill" src="/assets/home/skills/ico_angular.png" alt="icono_angular" title="ANGULAR">
+					<img class="skill" src="/assets/home/skills/ico_react.png" alt="icono_react" title="REACT">
+					<img class="skill" src="/assets/home/skills/ico_vue.png" alt="icono_vuejs" title="VUE.JS">
+				</div>
+				<div class="skills">
+					<img class="skill" src="/assets/home/skills/ico_node.png" alt="ico_node" title="NODE.JS">
+					<img class="skill" src="/assets/home/skills/ico_php.png" alt="ico_php" title="PHP">
+					<img class="skill" src="/assets/home/skills/ico_mysql.png" alt="ico_mysql" title="MYSQL">
+					<img class="skill" src="/assets/home/skills/ico_wordpress.png" alt="ico_wordpress" title="WORDPRESS">
+					<img class="skill" src="/assets/home/skills/ico_git.png" alt="ico_git" title="GIT">
+				</div>
+			</div>
+			
+			<div class="mode_mobil">
+				<div class="skills">
+					<img class="skill" src="/assets/home/skills/ico_html5.png" alt="icono_html5" title="HTML5">
+					<img class="skill" src="/assets/home/skills/ico_css3.png" alt="icono_css3" title="CSS3">
+					<img class="skill" src="/assets/home/skills/ico_js.png" alt="icono_javascript" title="JAVASCRIPT">
+					<img class="skill" src="/assets/home/skills/ico_ts.png" alt="icono_typescript" title="TYPESCRIPT">
+					<img class="skill" src="/assets/home/skills/ico_angular.png" alt="icono_angular" title="ANGULAR">
+				</div>
+				<div class="skills">
+					<img class="skill" src="/assets/home/skills/ico_react.png" alt="icono_react" title="REACT">
+					<img class="skill" src="/assets/home/skills/ico_vue.png" alt="icono_vuejs" title="VUE.JS">
+					<img class="skill" src="/assets/home/skills/ico_node.png" alt="ico_node" title="NODE.JS">
+					<img class="skill" src="/assets/home/skills/ico_php.png" alt="ico_php" title="PHP">
+				</div>
+				<div class="skills">
+					<img class="skill" src="/assets/home/skills/ico_mysql.png" alt="ico_mysql" title="MYSQL">
+					<img class="skill" src="/assets/home/skills/ico_wordpress.png" alt="ico_wordpress" title="WORDPRESS">
+					<img class="skill" src="/assets/home/skills/ico_git.png" alt="ico_git" title="GIT">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

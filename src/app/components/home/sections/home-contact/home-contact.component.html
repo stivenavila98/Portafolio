@@ -1,0 +1,67 @@
+<div class="container py-5 mt-3">
+	<h2 class="subtitle">{{'contact.subtitle' | translate}}</h2>
+	<p class="subtitle_description">{{'contact.subtitle_description' | translate}}</p>
+
+	<div class="py-4"></div>
+
+	<div class="row">
+		<div class="col-12 col-md-6 col-xxl-5">
+			<h3 class="title_contact">{{'contact.form_title' | translate}}</h3>
+
+			<form class="form_contact" action="https://docs.google.com/forms/d/e/1FAIpQLScKGQ7P2dd1EyJbIDtGRm20V-AvFLOvcFWXkhCaICKRg7bx6w/formResponse" method="post" (ngSubmit)="sendForm($event)">
+				<div>
+					<input
+						type="text"
+						name="entry.825606978"
+						[placeholder]="nameFieldsform.name"
+						[(ngModel)]="formData.name"
+						(input)="checkFild('name')"
+					/>
+					<p class="error" *ngIf="formDataEmpty.name">{{'contact.form_fields_error.empty' | translate}}</p>
+				</div>
+			
+				<div>
+					<input
+					type="text"
+					name="emailAddress"
+					[placeholder]="nameFieldsform.mail"
+					[(ngModel)]="formData.email"
+					(input)="checkFild('email')"
+				/>
+					<p class="error" *ngIf="formDataEmpty.email">{{'contact.form_fields_error.mail' | translate}}</p>
+				</div>
+			
+				<div>
+					<textarea
+						name="entry.680775010"
+						[placeholder]="nameFieldsform.message"
+						[(ngModel)]="formData.message"
+						(input)="checkFild('message')"
+					></textarea>
+					<p class="error" *ngIf="formDataEmpty.message">{{'contact.form_fields_error.empty' | translate}}</p>
+				</div>
+			
+				<button type="submit">{{'contact.form_btn_send' | translate}}</button>
+			</form>
+		</div>
+		<div class="col-12 mt-5 col-md-6 mt-md-0 col-xxl-5 offset-xxl-2 d-flex align-items-center">
+			<img src="/assets/home/contact.jpg" alt="contact">
+		</div>
+	</div>
+</div>
+
+
+<div class="container mt-5">
+	<footer>
+		<div class="social">
+			<a href="tel:+584127698081"><img src="/assets/home/social/call.png" alt="llamada"></a>
+	
+			<a href="mailto:stivenavila.dev@gmail.com"><img src="/assets/home/social/email.png" alt="correo"></a>
+	
+			<a href="https://api.whatsapp.com/send?phone=584127698081&text=Hola!" target="_blank"><img src="/assets/home/social/whatsapp_alt.png" alt="whatsapp"></a>
+	
+			<a href="https://www.linkedin.com/in/stiven-avila-bbb672222" target="_blank"><img src="/assets/home/social/linkedin.png" alt="linkedin"></a>
+		</div>
+		<p class="copyright">&copy;{{'contact.copyright' | translate}} <br> <strong>Stiven Avila</strong></p>
+	</footer>
+</div>

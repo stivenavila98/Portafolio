@@ -1,0 +1,129 @@
+<!--==========================
+	TRABAJOS (VIEW MAIN)
+==========================-->
+<div class="container py-5 mt-3">
+	<h2 class="subtitle">{{'portfolio.subtitle' | translate}}</h2>
+	<p class="subtitle_description">{{'portfolio.subtitle_description' | translate}}</p>
+
+	<h3 class="title_works">{{'portfolio.secondary_subtitles.app_web' | translate}}</h3>
+	<div class="row">
+		<div class="col-12 col-md-6 col-lg-4 mt-4">
+			<div class="work" (click)="showWork('panel_administrativo_academias')">
+				<img src="/assets/home/works/academia.jpg" alt="panel_administrativo_academias">
+				<div class="box">
+					<h3 class="title">{{'portfolio.works.panel_administrativo_academias.title' | translate}}</h3>
+					<p class="description">{{'portfolio.works.panel_administrativo_academias.extract' | translate}}</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-12 col-md-6 col-lg-4 mt-4">
+			<div class="work" (click)="showWork('coepamm')">
+				<img src="/assets/home/works/coepamm.jpg" alt="coepamm">
+				<div class="box">
+					<h3 class="title">{{'portfolio.works.coepamm.title' | translate}}</h3>
+					<p class="description">{{'portfolio.works.coepamm.extract' | translate}}</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-12 col-md-6 col-lg-4 mt-4">
+			<div class="work" (click)="showWork('magi')">
+				<img src="/assets/home/works/magi.jpg" alt="m.a.g.i">
+				<div class="box">
+					<h3 class="title">{{'portfolio.works.magi.title' | translate}}</h3>
+					<p class="description">{{'portfolio.works.magi.extract' | translate}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<h3 class="title_works">{{'portfolio.secondary_subtitles.websites' | translate}}</h3>
+	<div class="row">
+		<div class="col-12 col-md-6 col-lg-4 mt-4">
+			<div class="work" (click)="showWork('meson_rebeca')">
+				<img src="/assets/home/works/meson_rebeca.jpg" alt="meson_rebeca">
+				<div class="box">
+					<h3 class="title">{{'portfolio.works.meson_rebeca.title' | translate}}</h3>
+					<p class="description">{{'portfolio.works.meson_rebeca.extract' | translate}}</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-12 col-md-6 col-lg-4 mt-4">
+			<div class="work" (click)="showWork('iloveenglish')">
+				<img src="/assets/home/works/iloveenglish.jpg" alt="iloveenglish">
+				<div class="box">
+					<h3 class="title">{{'portfolio.works.iloveenglish.title' | translate}}</h3>
+					<p class="description">{{'portfolio.works.iloveenglish.extract' | translate}}</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-12 col-md-6 col-lg-4 mt-4">
+			<div class="work" (click)="showWork('webprofesionalonline')">
+				<img src="/assets/home/works/webprofesionalonline.jpg" alt="webprofesionalonline">
+				<div class="box">
+					<h3 class="title">{{'portfolio.works.webprofesionalonline.title' | translate}}</h3>
+					<p class="description">{{'portfolio.works.webprofesionalonline.extract' | translate}}</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-12 col-md-6 col-lg-4 mt-4">
+			<div class="work" (click)="showWork('donuts')">
+				<img src="/assets/home/works/donuts.jpg" alt="donuts">
+				<div class="box">
+					<h3 class="title">{{'portfolio.works.donuts.title' | translate}}</h3>
+					<p class="description">{{'portfolio.works.donuts.extract' | translate}}</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-12 col-md-6 col-lg-4 mt-4">
+			<div class="work" (click)="showWork('one_page')">
+				<img src="/assets/home/works/one_page.jpg" alt="one_page">
+				<div class="box">
+					<h3 class="title">{{'portfolio.works.one_page.title' | translate}}</h3>
+					<p class="description">{{'portfolio.works.one_page.extract' | translate}}</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-12 col-md-6 col-lg-4 mt-4">
+			<div class="work" (click)="showWork('ecoambiente')">
+				<img src="/assets/home/works/ecoambiente.jpg" alt="ecoambiente">
+				<div class="box">
+					<h3 class="title">{{'portfolio.works.ecoambiente.title' | translate}}</h3>
+					<p class="description">{{'portfolio.works.ecoambiente.extract' | translate}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!--====================
+	MODAL
+====================-->
+<div class="container_modal" *ngIf="showModal">
+	<div class="modal_backgroung" (click)="showModal = false"></div>
+	<div class="custom_modal">
+		<div>
+			<h3 class="title">{{workSelected.title}}</h3>
+	
+			<p class="mt-4"><span>{{'portfolio.work_view.proprietor' | translate}}:</span> {{workSelected.proprietor}}</p>
+			<p class="mt-2"><span>{{'portfolio.work_view.developed' | translate}}:</span> {{workSelected.created_with}}</p>
+			<p class="mt-2" *ngIf="workSelected.link"><span>{{'portfolio.work_view.link' | translate}}:</span> <a [href]="workSelected.link" target="_blank"> {{workSelected.link}}</a></p>
+			<p class="mt-2 text-justify"><span>{{'portfolio.work_view.description' | translate}}:</span> {{workSelected.description}}</p>
+
+			<div class="mt-5" *ngFor="let img of workSelected.imgs; let i = index">
+				<span>{{'portfolio.work_view.screenshot' | translate}} #{{i+1}}</span>
+				<img class="mt-2" [src]="img.path" [alt]="img.alt">
+			</div>
+		</div>
+
+		<img class="btn_close" (click)="showModal = false" src="/assets/home/close_modal.png" alt="close_modal">
+	</div>
+</div>

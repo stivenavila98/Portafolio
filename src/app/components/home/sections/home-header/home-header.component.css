@@ -1,0 +1,98 @@
+.language {
+	position: absolute;
+	top: 20px;
+    right: 20px;
+}
+.language .btn {
+	width: 35px;
+	padding: 5px;
+	background: none;
+	color: #2196f3;
+	font-weight: bold;
+    font-size: 14px;
+	cursor: pointer;
+	transition: all ease .3s;
+}
+.language .btn_left {
+	border: 2px solid #2196f3;
+    border-right: 0;
+    border-radius: 20px 0 0 20px;
+}
+.language .btn_right {
+	border: 2px solid #2196f3;
+    border-left: 0;
+    border-radius: 0 20px 20px 0;
+}
+.btn.active {
+	background: #2196f3!important;
+    color: #fff!important;
+}
+
+
+.profile {
+	display: flex;
+	align-items: center;
+}
+.profile .avatar {
+	width: 200px;
+	animation: show .5s;
+}
+.profile .title {
+	font-size: 2rem;
+	font-weight: 400;
+	color: #6899bf;
+}
+@media (max-width: 575px) {
+	.profile {
+		flex-direction: column;
+	}
+	.profile .title {
+		text-align: center;
+	}
+}
+
+
+.description {
+	padding: 15px;
+	box-shadow: 1px 1px 8px rgb(0 0 0 / 20%);
+	border-radius: 10px;
+	text-align: justify;
+	font-size: 18px;
+	color: #ffffff;
+	background: #2196f3;
+	line-height: 1.5;
+}
+
+
+.container_skills .title {
+	text-align: center;
+	font-weight: 400;
+	color: #6899bf;
+	font-size: 2rem;
+}
+.skills {
+	display: flex;
+	justify-content: center;
+}
+.skill {
+	width: 60px;
+	padding: 10px;
+	transition: all ease .3s;
+}
+.skill:hover {
+	transform: scale(1.2);
+}
+.mode_desktop {
+	display: block;
+}
+.mode_mobil {
+	display: none;
+}
+@media (max-width: 575px) {
+	.mode_desktop {
+		display: none;
+	}
+	.mode_mobil {
+		display: block;
+	}
+}

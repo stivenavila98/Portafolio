@@ -1,0 +1,42 @@
+.service {
+	text-align: center;
+}
+.service img {
+	width: 200px;
+}
+.service .title {
+	text-align: center;
+    color: #404040;
+    font-weight: bold;
+    margin-top: 15px;
+}
+.service .description {
+	text-align: center;
+	color: #2196f3;
+	font-weight: bold;
+	margin-top: 5px;
+	line-height: 1.4;
+}
+
+
+.separador {
+	background: #f7f7f7;
+    border: 2px solid #eaeaea;
+}
+.separador img {
+	width: 100%;
+	max-width: 350px;
+}
+
+.separador .title {
+	color: #2196f3;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.separador .description {
+	line-height: 1.5;
+    text-align: justify;
+    color: #354e5a;
+    font-weight: bold;
+}
