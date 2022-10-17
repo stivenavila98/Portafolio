@@ -21,6 +21,7 @@ export class HomeHeaderComponent implements OnInit {
 	}
 
 	load = false;
+	loading_animation = false;
 	
 
 	constructor(public translate: TranslateService) { }
@@ -39,7 +40,7 @@ export class HomeHeaderComponent implements OnInit {
 	}
 
 	loadDataProfile(reload = false) {
-		if(!reload) this.profile.name = "Stiven Avila";
+		this.profile.name = "Stiven Avila";
 
 		let copy:any = { ...this.profile };
 		this.profile.name = "";
@@ -48,6 +49,7 @@ export class HomeHeaderComponent implements OnInit {
 		copy.work_position = copy.work_position.split("");
 
 		let start = () => {
+			this.loading_animation = true;
 			let cont = 0;
 			let string_length = copy.name.length;
 			let temp = true;
@@ -68,7 +70,10 @@ export class HomeHeaderComponent implements OnInit {
 						this.profile.work_position += copy.work_position[cont];
 						cont++;
 					}
-					else clearInterval(interval);
+					else {
+						clearInterval(interval);
+						this.loading_animation = false;
+					}
 				}
 			}, 30);
 		}
@@ -82,6 +87,8 @@ export class HomeHeaderComponent implements OnInit {
 	}
 
 	changeLanguage(language) {
+		if(this.loading_animation) return;
+
 		for(const key in this.languages) {
 			this.languages[key] = false;
 		}

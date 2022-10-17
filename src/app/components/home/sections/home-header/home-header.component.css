@@ -16,12 +16,12 @@
 .language .btn_left {
 	border: 2px solid #2196f3;
     border-right: 0;
-    border-radius: 20px 0 0 20px;
+    border-radius: 8px 0 0 8px;
 }
 .language .btn_right {
 	border: 2px solid #2196f3;
     border-left: 0;
-    border-radius: 0 20px 20px 0;
+    border-radius: 0 8px 8px 0;
 }
 .btn.active {
 	background: #2196f3!important;
