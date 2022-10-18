@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
 	}
 
 
-	lenguageChanged(lenguage){
+	lenguageChanged(lenguage:object){
 		this.translationLenguage = lenguage;
 	}
 }

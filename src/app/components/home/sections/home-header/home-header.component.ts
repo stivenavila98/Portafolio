@@ -10,12 +10,12 @@ export class HomeHeaderComponent implements OnInit {
 	@Output() lenguageChanged = new EventEmitter();
 	@Input() translationLenguage:any = null;
 
-	profile = {
+	profile:any = {
 		name: "",
 		work_position: ""
 	}
 
-	languages = {
+	languages:any = {
 		en: false,
 		es: false
 	}
@@ -86,7 +86,7 @@ export class HomeHeaderComponent implements OnInit {
 		}
 	}
 
-	changeLanguage(language) {
+	changeLanguage(language: any) {
 		if(this.loading_animation) return;
 
 		for(const key in this.languages) {

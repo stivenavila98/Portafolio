@@ -11,7 +11,7 @@ export class HomeWorksComponent implements OnInit {
 	@Input() translationLenguage:any = null;
 
 	showModal = false;
-	works = {
+	works:any = {
 		"panel_administrativo_academias": {
 			title: "Panel Administrativo para Academias",
 			proprietor: "Juan José Calvo.",
@@ -196,7 +196,7 @@ export class HomeWorksComponent implements OnInit {
 			}]
 		}
 	}
-	workSelected = null;
+	workSelected:any = null;
 
 	constructor(public translate: TranslateService) {
 		
@@ -216,7 +216,7 @@ export class HomeWorksComponent implements OnInit {
 		}
 	}
 
-	showWork(key) {
+	showWork(key: any) {
 		if(!this.works[key]) return;
 		this.workSelected = this.works[key];
 		this.showModal = true;

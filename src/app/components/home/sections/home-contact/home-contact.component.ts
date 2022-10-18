@@ -8,18 +8,18 @@ import { Component, OnInit, Input } from '@angular/core';
 export class HomeContactComponent implements OnInit {
 	@Input() translationLenguage:any = null;
 
-	formData = {
+	formData:any = {
 		name: "",
 		email: "",
 		message: ""
 	}
-	formDataEmpty = {
+	formDataEmpty:any = {
 		name: false,
 		email: false,
 		message: false
 	}
 
-	nameFieldsform = {
+	nameFieldsform:any = {
 		name: "",
 		mail: "",
 		message: ""
@@ -40,7 +40,7 @@ export class HomeContactComponent implements OnInit {
 		}
 	}
 
-	checkFild(key) {
+	checkFild(key:any) {
 		this.formData[key] = this.formData[key].trim();
 
 		if(key === "email") {
@@ -55,7 +55,7 @@ export class HomeContactComponent implements OnInit {
 		else this.formDataEmpty[key] = false;
 	}
 
-	sendForm(e) {
+	sendForm(e:any) {
 		let is_empty = false;
 		for(let key in this.formData) {
 			this.formData[key] = this.formData[key].trim();
